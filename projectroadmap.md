@@ -26,7 +26,7 @@
 ## Related repository — quick evaluation
 I reviewed a simple CLI habit tracker repository that logs daily completions to a CSV and prints summaries. It reinforces that a CSV approach is enough for Sprint 1 and keeps dependencies low. Their structure suggests separating prompt logic from file I/O which I will mirror for clean functions and easier testing.
 
-**Repository reviewed:** [https://github.com/kraanzu/habit-tracker](https://github.com/kraanzu/habit-tracker)
+**Repository reviewed:** I reviewed the open-source project [30 Days of Python](https://github.com/Asabeneh/30-Days-Of-Python). It includes examples of user input, file handling, and daily logging, concepts that directly support my Daily Affirmations project. The repo helped me understand how to structure a simple CLI-based project and organize functions logically.
 
 **Findings I will adopt**
 - Use a fixed CSV header with ISO dates
