@@ -31,10 +31,13 @@ def log_habits():
     results = []
     print("\nCheck off today's habits (y/n):")
     for h in habits:
+    while True:
         ans = input(f"- {h}: ").strip().lower()
-        if ans not in ["y", "n"]:
-            ans = "n"
-        results.append(ans)
+        if ans in ["y", "n"]:
+            break
+        print("Please enter y or n.")
+    results.append(ans)
+
 
     note = input("Any quick note for today? ").strip()
 
