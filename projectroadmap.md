@@ -1,47 +1,63 @@
-# Project Roadmap — Daily Affirmations
+# Daily Affirmations — Project Roadmap
 
 ## Sprint 1 Goals
 - [x] Choose project idea and mark "Go" in Teams
-- [x] Create repo under `ksu-is`, add README.md
+- [x] Create repo under `ksu-is`, add `README.md`
 - [x] Add `projectroadmap.md` with task list
-- [ ] Explore one similar Python repo and note takeaways
-- [ ] Create minimal `daily_affirmations.py` with stub functions
-- [ ] Commit at least once after editing README and roadmap
+- [x] Explore one similar Python repo and note takeaways
+- [x] Create minimal `daily_affirmations.py` with stub functions
+- [x] Commit at least once after editing README and roadmap
 
-## Sprint 1 Tasks (assign to self)
-- [ ] Create folders `data/` and `docs/`
-- [ ] Add empty `data/log.csv` with header: `date,habit_1,habit_2,habit_3,notes`
-- [ ] In `daily_affirmations.py` add:
-  - [ ] `get_random_affirmation()` from a local list
-  - [ ] `prompt_habits()` to ask y/n for 2–3 habits
-  - [ ] `append_log_row()` to write a CSV row for today
-- [ ] Test by running once and confirming `data/log.csv` updated
-- [ ] Commit and push with message: `feat: initial stub + csv logging`
+## Sprint 1 Tasks
+- [x] Create folders `data/` and `docs/`
+- [x] Add `data/log.csv` with header: `date,habit_1,habit_2,habit_3,notes`
+- [x] In `daily_affirmations.py` add:
+  - [x] `get_affirmation()` from a local list
+  - [x] `log_habits()` to ask y/n for 2–3 habits
+  - [x] Write a CSV row for today
+- [x] Test by running once and confirming `data/log.csv` updated
+- [x] Commit and push with message: `feat: initial stub + csv logging`
 
 ## Habits for now
-- Habit 1: 10 minutes focused study
-- Habit 2: Hydration check
-- Habit 3: Evening reflection or stretch
+- Habit 1: 10 minutes focused study  
+- Habit 2: Hydration check  
+- Habit 3: Evening reflection or stretch  
 
-## Related repository — quick evaluation
-I reviewed a simple CLI habit tracker repository that logs daily completions to a CSV and prints summaries. It reinforces that a CSV approach is enough for Sprint 1 and keeps dependencies low. Their structure suggests separating prompt logic from file I/O which I will mirror for clean functions and easier testing.
+## Related Repository — Quick Evaluation
+Reviewed **30 Days of Python**: https://github.com/Asabeneh/30-Days-Of-Python  
 
-**Repository reviewed:** I reviewed the open-source project [30 Days of Python](https://github.com/Asabeneh/30-Days-Of-Python). It includes examples of user input, file handling, and daily logging, concepts that directly support my Daily Affirmations project. The repo helped me understand how to structure a simple CLI-based project and organize functions logically.
+**Takeaways**
+- Organized by topic and easy to navigate  
+- Clear comments and short, focused functions  
+- Demonstrates lists, loops, and file handling effectively  
 
-**Findings I will adopt**
-- Use a fixed CSV header with ISO dates
-- Keep a short list of 2–3 habits at first
-- Keep functions small: one for prompting, one for saving
+**How I applied it**
+- Used small, clear functions in my own script  
+- Added brief comments and logical file organization  
+- Adopted simple Markdown documentation style  
 
-**What I will do differently**
-- Include a daily affirmation before prompts to improve motivation
-- Keep everything stdlib in Sprint 1 to avoid setup friction
+## Definition of Done — Sprint 1
+- [x] Repo exists under `ksu-is` with README and roadmap  
+- [x] `daily_affirmations.py` runs and appends to `data/log.csv`  
+- [x] One related repo reviewed and notes recorded here  
 
-## Future Sprint Ideas
-- Streak calculation and basic charts with `matplotlib`
-- Export the day’s affirmation to a small PNG for phone lock screen
-- Optional GUI later (Tkinter) after core logic is solid
+---
 
-## Definition of Done for Sprint 1
-- Repo exists under `ksu-is` with README and roadmap committed
-- A stub `daily_affirmations.py` runs and creates or appends to `data/log.csv`
+## Sprint 2 Summary
+**Goal:** Begin coding and manage updates with Git.  
+
+**Completed**
+- [x] Added input validation (accepts only y/n for each habit)  
+- [x] Added timestamp to each CSV log entry  
+- [x] Tested entries multiple times and verified `data/log.csv` updates correctly  
+- [x] Made 6+ commits with meaningful comments  
+- [x] Updated README with run instructions and purpose  
+- [x] Confirmed repository is active under `ksu-is` organization  
+
+**Next Steps (Sprint 3)**
+- [ ] Add a random daily affirmation message  
+- [ ] Create a weekly summary command  
+- [ ] Explore visualization (matplotlib or pandas)  
+
+### Run Notes
+Tested locally on Python 3.x. The script successfully created and appended multiple daily log entries with timestamps. Everything ran without errors.
