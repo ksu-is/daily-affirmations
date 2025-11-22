@@ -4,7 +4,7 @@
 
 import csv
 import random
-from datetime import date
+from datetime import date, datetime
 from pathlib import Path
 
 affirmations = [
@@ -47,7 +47,9 @@ def log_habits():
         writer = csv.writer(f)
         if new_file:
             writer.writerow(["date"] + habits + ["note"])
-        writer.writerow([date.today().isoformat()] + results + [note])
+from datetime import datetime
+...
+writer.writerow([datetime.now().strftime("%Y-%m-%d %H:%M:%S")] + results + [note])
 
     print("Entry saved!\n")
 
