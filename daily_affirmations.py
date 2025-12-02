@@ -1,6 +1,7 @@
 # daily_affirmations.py
 # Author: Abigail Henderson
 # Simple app to show a random daily affirmation and log habits
+# Sprint 3 update: cleaned formatting and preparing for random affirmation feature
 
 import csv
 import random
@@ -25,19 +26,20 @@ data_folder = Path("data")
 log_file = data_folder / "log.csv"
 
 def get_affirmation():
+    """Return a random daily affirmation."""
     return random.choice(affirmations)
 
 def log_habits():
+    """Prompt user for habit completion and log results."""
     results = []
     print("\nCheck off today's habits (y/n):")
     for h in habits:
-    while True:
-        ans = input(f"- {h}: ").strip().lower()
-        if ans in ["y", "n"]:
-            break
-        print("Please enter y or n.")
-    results.append(ans)
-
+        while True:
+            ans = input(f"- {h}: ").strip().lower()
+            if ans in ["y", "n"]:
+                break
+            print("Please enter y or n.")
+        results.append(ans)
 
     note = input("Any quick note for today? ").strip()
 
@@ -47,13 +49,12 @@ def log_habits():
         writer = csv.writer(f)
         if new_file:
             writer.writerow(["date"] + habits + ["note"])
-from datetime import datetime
-...
-writer.writerow([datetime.now().strftime("%Y-%m-%d %H:%M:%S")] + results + [note])
+        writer.writerow([datetime.now().strftime("%Y-%m-%d %H:%M:%S")] + results + [note])
 
     print("Entry saved!\n")
 
 def show_summary():
+    """Display last few entries from the log file."""
     if not log_file.exists():
         print("No log found yet.")
         return
@@ -64,6 +65,7 @@ def show_summary():
             print(line.strip())
 
 def main():
+    """Main app flow."""
     print("\n--- Daily Affirmations ---")
     print(get_affirmation())
     print("---------------------------")
